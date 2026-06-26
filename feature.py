@@ -54,10 +54,16 @@ print(outliers)
 plt.figure(figsize=(7,4))
 sns.scatterplot(x=df['Age'],y=df['Spending'])
 plt.title('Scatter plot of Age vs Spending')
+plt.xlabel('Age')
+plt.ylabel('spending')
 plt.show()
 
 #correlation matrix
 plt.figure(figsize=(10,5))
 sns.heatmap(df.select_dtypes(include='number').corr(),annot=True,cmap='coolwarm',fmt='.2f')
 plt.title('Correlation matrix of Age vs Spending')
+plt.xlabel('spending amounts')
+plt.ylabel('number of customers')
 plt.show()
+
+
