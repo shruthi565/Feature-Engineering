@@ -41,3 +41,23 @@ plt.title('boxplot of spending')
 plt.xlabel('Spending amount')
 plt.ylabel('number of customers')
 plt.show()
+
+Q1 = df["Age"].quantile(0.25)
+Q3 = df["Age"].quantile(0.75)
+IQR = Q3 - Q1
+lower = Q1 - 1.5 * IQR
+upper = Q3 + 1.5 * IQR
+outliers = df[(df["Age"] < lower) | (df["Age"] > upper)]
+print(outliers)
+
+#scatterplot
+plt.figure(figsize=(7,4))
+sns.scatterplot(x=df['Age'],y=df['Spending'])
+plt.title('Scatter plot of Age vs Spending')
+plt.show()
+
+#correlation matrix
+plt.figure(figsize=(10,5))
+sns.heatmap(df.select_dtypes(include='number').corr(),annot=True,cmap='coolwarm',fmt='.2f')
+plt.title('Correlation matrix of Age vs Spending')
+plt.show()
