@@ -14,7 +14,7 @@ This project analyzes customer sales data using **Python, Pandas, Matplotlib, an
 ```text
 Sales-Data-Analysis/
 │
-├── sales_analysis.py
+├── feature.py
 ├── sales_data.csv
 └── README.md
 ```
@@ -70,7 +70,7 @@ pip install pandas matplotlib seaborn
 Make sure:
 
 ```text
-sales_analysis.py
+feature.py
 sales_data.csv
 ```
 
@@ -79,7 +79,7 @@ are in the same folder.
 ### 3. Run the program
 
 ```bash
-python sales_analysis.py
+python feature.py
 ```
 
 The program will display the analysis results and graphs.
